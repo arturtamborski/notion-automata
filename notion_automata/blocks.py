@@ -14,7 +14,7 @@ class Config:
 
 
 class CodeBlock:
-    title = "`code`"
+    title = ""
     language = "Plain Text"
 
     def __init__(self, block: ToggleBlock):
@@ -58,6 +58,7 @@ class ConfigBlock(CodeBlock):
 
 
 class SourceBlock(CodeBlock):
+    title = '`source`'
     language = "Python"
 
     def get(self) -> str:
